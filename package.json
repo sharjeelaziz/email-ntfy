@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "html-to-text": "^9.0.5",
+    "postal-mime": "^2.4.3"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.8.0",
+    "@cloudflare/workers-types": "^4.20250313.0",
+    "@types/html-to-text": "^9",
+    "@vitest/coverage-istanbul": "^3.0.8",
+    "typescript": "^5.8.2",
+    "vitest": "3.0.8",
+    "wrangler": "^4.0.0"
+  }
+}
