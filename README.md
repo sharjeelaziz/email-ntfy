@@ -1,4 +1,4 @@
-# email to ntfy
+# email to ntfy [![codecov](https://codecov.io/gh/sharjeelaziz/email-ntfy/graph/badge.svg?token=AWCG0Z14KC)](https://codecov.io/gh/sharjeelaziz/email-ntfy) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A Cloudflare email worker to forward emails as ntfy.sh notifications.
 
