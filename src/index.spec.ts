@@ -59,7 +59,7 @@ describe('email worker', () => {
     if (lastCall && lastCall[1] && typeof lastCall[1].body === 'string') {
       const payload = JSON.parse(lastCall[1].body);
 
-      expect(payload).toBe("This is a test email message.\n\nFrom: sa@example.com\nDate: 2025-03-11T20:54:05.000Z");
+      expect(payload).toBe("This is a test email message. From: sa@example.com Date: 2025-03-11T20:54:05.000Z");
     }
 
     expect(message.setReject).not.toHaveBeenCalled();

@@ -39,6 +39,7 @@ You should see something like this
 - Go to your [zone's Email Workers settings](https://dash.cloudflare.com/?to=/:account).
 - Click the zone (e.g. `example.com`), then `Email`, `Email Routing`.
 - On the `Email Workers` tab, register an email route.
+- Verify the forwarding email address if you are using one under *Destination addresses*
 
 #### Verify
 

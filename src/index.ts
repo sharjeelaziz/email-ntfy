@@ -65,7 +65,7 @@ export default {
         }
 
         const init = {
-          body: JSON.stringify(`${plainText}\n\nFrom: ${from}\nDate: ${date}`),
+          body: JSON.stringify(`${plainText} From: ${from} Date: ${date}`),
           method: "POST",
           headers: {
             "Authorization": `Bearer ${token}`,
