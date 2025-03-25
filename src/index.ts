@@ -1,14 +1,14 @@
 import PostalMime from "postal-mime";
 import { convert } from "html-to-text";
 
-const getPlainText = (text?: string, html?: string): string | null => {
+const getPlainText = (text?: string, html?: string): string => {
   let plainText = text;
-  if (!plainText && html) {
+  if ((!plainText || plainText.trim().length === 0) && html) {
     plainText = convert(html);
   }
 
-  if (!plainText) {
-    return null;
+  if (!plainText || plainText.trim().length === 0) {
+    return "Error: Could not get text from email.";
   }
 
   return plainText.trim();
@@ -16,6 +16,7 @@ const getPlainText = (text?: string, html?: string): string | null => {
 
 export default {
   async email(message, env, ctx) {
+
 
     try {
       const topic = env.NTFY_TOPIC;
@@ -28,7 +29,7 @@ export default {
 
       const subject = email.subject;
       const plainText = getPlainText(email.text, email.html);
-      const from = message.from;
+      const from = email.from.address;
       const date = email.date;
 
       // Extract domain from email address
